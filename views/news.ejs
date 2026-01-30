@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="et">
+<%- include("includes/head") %>
+<header>
+    <h1>Uudis</h1>
+    <p>Siin saate uurida uudist lähemalt</p>
+</header>
+<body>
+    <main>
+       <h2><%= uudis.pealkiri %></h2>
+        <p><%= uudis.sisu %></p>
+        <!-- <a href="/news/delete/<%= uudis.id %>">Kustuta uudis</a> -->
+
+        <a href="/">Tagasi avalehele</a>
+    </main>
+</body>
+
+<%- include('includes/footer') %>
+
+</html>

@@ -4,8 +4,7 @@
   "description": "",
   "main": "node01.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -13,8 +12,17 @@
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^17.2.3",
+    "ejs": "^4.0.1",
     "express": "^5.2.1",
+    "express-validator": "^7.3.1",
     "mysql2": "^3.16.1"
   },
-  "devDependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apeirophobia/Node-Alused.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Apeirophobia/Node-Alused/issues"
+  },
+  "homepage": "https://github.com/Apeirophobia/Node-Alused#readme"
 }

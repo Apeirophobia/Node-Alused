@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="et">
+<%- include("includes/head") %>
+<header>
+    <h1><%=title %></h1>
+    <p>Tere tulemast Lehma Muruplatsidele</p>
+</header>
+<body>
+
+    <%- include('includes/menu')%>
+    <main>
+        <% if (msg === 'deleted') { %>
+            <div class="errorBox">
+                <p class="errorMsg">Postitus kustutati</p>
+            </div>
+        <% } %>
+        
+        <% if (msg === 'delete_failed') { %>
+            <div class="errorBox">
+                <p class="errorMsg">Postitust ei õnnestunud kustutada</p>
+            </div>
+        <% } %>
+
+        <h1>Uudised:</h1>
+        <a href="/news/create">Lisa uus uudis</a>
+        <br>
+        <ul>
+        <% uudised.forEach(uudis => { %>
+            <h2>
+                <a class="uudis" href="/news/<%= uudis.id %>"><%= uudis.pealkiri %></a>
+            </h2>
+            <a href="/news/<%= uudis.id %>/edit">Muuda</a><br>
+            <form action="/news/delete" method="post" onsubmit="return confirm('Kas sa oled kindel, et soovid selle uudise kustutada?')">
+                <input type="hidden" name="id" value="<%= uudis.id %>">
+                <br/>
+                <button class="danger" type="submit">Kustuta</button>
+            </form>
+        
+            <!-- <a href="/news/delete/<%= uudis.id %>">Kustuta uudis</a> -->
+            <!-- <p><%= uudis.sisu %></p> -->
+        <% }); %>
+        </ul>
+    </main>
+</body>
+
+<%- include('includes/footer') %>
+
+</html>

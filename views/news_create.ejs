@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="et">
+<%- include("includes/head") %>
+<header>
+    <h1>Lisa uudis</h1>
+    <p>Siin saate lisada uudist</p>
+</header>
+<body>
+    <main>
+        
+        <% if (errors && errors.length > 0) { %>
+            <div class="errorBox">
+        <% errors.forEach(error => { %>
+            <p class="errorMsg"><%= error.msg %></p>
+        <%    }) %>
+        </div>
+        <% } %>
+        
+        <br>
+        <form class="create" action="/news/create" method="post">
+            <input type="text" name="pealkiri" placeholder="Pealkiri"><br>
+            <textarea name="sisu" placeholder="Sisu"></textarea><br>
+            <button class="submit" type="submit">Lisa</button>
+        </form>
+        <br>
+        <a href="/">Tagasi avalehele</a>
+    </main>
+</body>
+
+<%- include('includes/footer') %>
+
+</html>

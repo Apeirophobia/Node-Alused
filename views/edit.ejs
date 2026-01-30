@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="et">
+<%- include("includes/head") %>
+<header>
+    <h1>Muuda uudis</h1>
+    <p>Siin saate muuta uudist</p>
+</header>
+<body>
+    <main>
+        <form class="create" action="/news/<%= uudis.id %>/edit" method="post">
+            <input type="text" name="pealkiri" placeholder="Pealkiri" value="<%= uudis.pealkiri %>" required><br>
+            <textarea name="sisu" placeholder="Sisu" required><%= uudis.sisu %></textarea><br>
+            <button class="submit" type="submit">Muuda</button>
+        </form>
+        <br>
+        <a href="/">Tagasi avalehele</a>
+    </main>
+</body>
+
+<%- include('includes/footer') %>
+
+</html>
