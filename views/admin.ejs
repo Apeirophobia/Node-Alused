@@ -3,21 +3,10 @@
 <%- include("includes/head") %>
 <header>
     <h1><%=title %></h1>
-    <p>
-        Tere tulemast Lehma Muruplatsidele<% if (user !== null) {%>,
-            <%= user.username %>!
-        <% } %>
-    </p>
+    <p>Tere tulemast Lehma Muruplatsidele | ADMIN</p>
 
     <ul>
-        <% if (user === null) {%>
-            
-            <li><a href="/login">Logi sisse</a></li>
-            <li><a href="/register">Registreeri</a></li>
-        
-        <% } else {%>
-                <li><a href='/logout'>Logi välja</a></li>
-        <% } %>
+        <li><a href='/logout'>Logi välja</a></li>
     </ul>
 </header>
 <body>
@@ -37,11 +26,22 @@
         <% } %>
 
         <h1>Uudised:</h1>
+            <a href="/news/create">Lisa uus uudis</a>
+        <br>
         <ul>
         <% uudised.forEach(uudis => { %>
             <h2>
                 <a class="uudis" href="/news/<%= uudis.id %>"><%= uudis.pealkiri %></a>
             </h2>
+
+
+            <a href="/news/<%= uudis.id %>/edit">Muuda</a><br>
+            <form action="/news/delete" method="post" onsubmit="return confirm('Kas sa oled kindel, et soovid selle uudise kustutada?')">
+                <input type="hidden" name="id" value="<%= uudis.id %>">
+                <br/>
+                <button class="danger" type="submit">Kustuta</button>
+            </form>
+
         
             <!-- <a href="/news/delete/<%= uudis.id %>">Kustuta uudis</a> -->
             <!-- <p><%= uudis.sisu %></p> -->

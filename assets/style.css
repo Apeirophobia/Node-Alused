@@ -44,6 +44,19 @@ body {
     background-repeat: repeat;
 
 }
+
+/* DATA  */
+
+li.data-list-item {
+    padding: 10px;
+}
+div.data{
+    background-color: #32cd32;
+    width: 20%;
+    border-radius: 50px;
+    border: 1pt solid black;
+    padding: 2%;
+}
 main{
     display: block;
     font-family: "Script MT Bold", cursive;
@@ -151,118 +164,3 @@ a.uudis:hover{
     font-weight: bold;
 }*/
 /* nav menu: sonhover */
-
-/************section************/
-section#osa1{
-    display: inline-block;
-    width: 20%;
-    border-right: 3px dashed limegreen;
-    border-left: 3px dashed limegreen;
-    border-bottom: 3px dashed limegreen;
-    border-radius: 60px;
-    padding: 2%;
-
-    /* background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); */
-}
-
-section#osa1 h3{
-    text-align: center;
-    background-color: limegreen;
-    color: orangered;
-    border-radius: 60px;
-    padding: 2%;
-    font-weight: bold;
-    font-variant: small-caps;
-}
-
-section#osa2{
-    display: inline-block;
-    width: 20%;
-    border-right: 3px dashed limegreen;
-    border-left: 3px dashed limegreen;
-    border-bottom: 3px dashed limegreen;
-    border-radius: 60px;
-    padding: 2%;
-
-    /* background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); */
-}
-
-section#osa2 h3{
-    text-align: center;
-    background-color: limegreen;
-    color: orangered;
-    border-radius: 60px;
-    padding: 2%;
-    font-weight: bold;
-    font-variant: small-caps;
-}
-
-section#osa3{
-    display: inline-block;
-    width: 20%;
-    border-right: 3px dashed limegreen;
-    border-left: 3px dashed limegreen;
-    border-bottom: 3px dashed limegreen;
-    border-radius: 60px;
-    padding: 2%;
-
-    /* background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); */
-}
-
-section#osa3 h3{
-    text-align: center;
-    background-color: limegreen;
-    color: orangered;
-    border-radius: 60px;
-    padding: 2%;
-    font-weight: bold;
-    font-variant: small-caps;
-}
-
-section#pildigalerii h3{
-    text-align: center;
-    background-color: limegreen;
-    color: orangered;
-    border-radius: 60px;
-    padding: 2%;
-    font-weight: bold;
-    font-variant: small-caps;
-}
-
-section#video h3{
-    text-align: center;
-    background-color: limegreen;
-    color: orangered;
-    border-radius: 60px;
-    padding: 2%;
-    font-weight: bold;
-    font-variant: small-caps;
-}
-
-section#muusika h3{
-    text-align: center;
-    background-color: limegreen;
-    color: orangered;
-    border-radius: 60px;
-    padding: 2%;
-    font-weight: bold;
-    font-variant: small-caps;
-}
-
-section#kaart h3{
-    text-align: center;
-    background-color: limegreen;
-    color: orangered;
-    border-radius: 60px;
-    padding: 2%;
-    font-weight: bold;
-    font-variant: small-caps;
-}
-
-div.container {
-    display: flex;
-    flex-wrap: wrap;
-}
-.container .product {
-    height: 50%;
-}

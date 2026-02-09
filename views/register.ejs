@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="et">
+<%- include("includes/head") %>
+<header>
+    <h1><%=title %></h1>
+    <p>Registreeru Lehma Muruplatsidele</p>
+</header>
+<body>
+
+    <%- include('includes/menu')%>
+    <main>
+        <% if (msg) { %>
+            <div class="errorBox">
+                <p class="errorMsg"><%= msg %></p>
+            </div>
+        <% } %>
+    <h1>Registreeru</h1>
+    <form action="/register" method="post">
+        <label for="uname">Kasutajanimi</label><br>
+        <input type="text" id="uname" name="username" required><br><br>
+        <label for="password">Parool</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Registreeru</button>
+    </form>
+    </main>
+</body>
+
+<%- include('includes/footer') %>
+
+</html>
