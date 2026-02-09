@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="et">
+<%- include("includes/head") %>
+<header>
+    <h1><%=title %></h1>
+    <p>Registreerunute andmed</p>
+</header>
+<body>
+
+    <%- include('includes/menu')%>
+    <main>
+
+        <h1>Andmed:</h1>
+        <br>
+        <ul class="data-list">
+
+        <% andmed.forEach(sissekanne => { %>
+        <li class="data-list-item">
+        <div class="data">
+            
+            <p>Nimi: <%= sissekanne.name %></p>
+            <p>Vanus: <%= sissekanne.age %></p>
+            <p>Hobid:</p>
+            <ul><% sissekanne.hobbies.forEach(hobby => { %>
+                <li><%= hobby %></li>
+            <%    }) %></ul>
+        <% }); %>
+        </div>
+        </li>
+        <br>
+        </ul>
+    </main>
+</body>
+
+<%- include('includes/footer') %>
+
+</html>

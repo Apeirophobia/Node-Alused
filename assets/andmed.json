@@ -1,0 +1,42 @@
+[ 
+    
+    {
+        "name": "Mary Jane",
+        "age": "17",
+        "hobbies": 
+            [
+                "Heartbreaker",
+                "Murderer"
+            ]
+    },
+
+    {
+        "name": "Internet Emitting Cow",
+        "age": "17",
+        "hobbies":
+        [
+            "Emitting internet",
+            "Surfing"
+        ]
+    },
+
+    {
+        "name": "Finn the Human",
+        "age": "13",
+        "hobbies":
+        [
+            "Adventures",
+            "Fighting"
+        ]
+    },
+
+    {
+        "name": "Chai",
+        "age": "30",
+        "hobbies":
+        [
+            "Smiling"
+        ]
+    }
+
+]
